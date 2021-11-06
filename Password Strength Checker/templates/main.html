@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Part B Midterm</title>
+
+   
+  </head>
+  <body>
+    <div class="container">
+
+          <h3>PASSWORD STRENGTH CHECKER BY LYMINHTRUNG</h3>
+          <h4>Midterm Fundamental Concept of Data Security </h4><br>
+          <form method="POST" class="form-group">
+            <input type="text" name="password" class="form-control" placeholder="password" value="{{ request.form.password }}"><br>
+            <button type="submit" name="submit" class="btn btn-default">Check</button>
+          </form>
+      </div>
+
+
+
+          {% if (predicted == "Very Weak Password") %}
+                <h3><div class="label label-danger">{{ predicted }}</div></h3>
+          {% endif %}
+
+          {% if (predicted == "Weak Password") %}
+                <h3><div class="label label-warning">{{ predicted }}</div></h3>
+          {% endif %}
+
+          {% if (predicted == "Strong Password") %}
+                <h3><div class="label label-info">{{ predicted }}</div></h3>
+          {% endif %}
+
+          {% if (predicted == "Very Strong Password") %}
+                <h3><div class="label label-success">{{ predicted }}</div></h3>
+          {% endif %}
+          <br>
+        
+    </div>
+  </body>
+</html>
